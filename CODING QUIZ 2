@@ -1,0 +1,43 @@
+package assignment;
+import java.util.*;
+class quiz1b {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		double com =0;
+		double sv;
+		double wtotal;
+		double dwages;
+		int hour;
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Enter sales           : RM");
+		sv = sc.nextDouble();
+		System.out.print("Enter hours worked    : ");
+		hour = sc.nextInt();
+		
+		if (sv >= 150 && sv <= 300) 
+		{
+			com = sv * 0.05;
+		}
+		else if (sv >= 301 && sv <= 500)
+		{
+			com = sv * 0.1;
+		}
+		else if (sv > 500) 
+		{
+			com = sv * 0.15;
+		}
+		
+		dwages = hour * 5.0;
+		wtotal = dwages + com;
+		
+		System.out.println();
+		System.out.printf("Commission            : RM%.2f" , com);
+		System.out.printf("\nDaily wages           : RM%.2f" , wtotal);
+
+	}
+}
