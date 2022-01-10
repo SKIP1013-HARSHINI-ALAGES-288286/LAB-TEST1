@@ -1,0 +1,70 @@
+
+		package assignment;
+
+		import java.util.Scanner;
+
+		public class quiz1a {
+
+			public static void main(String[] args) {
+				// TODO Auto-generated method stub
+				
+				double total;
+				int num;
+				double quan1 , quan2, quan3;
+				double pri1, pri2, pri3;
+				double sum1, sum2, sum3;
+				double ftotal;
+				double discount = 0;
+				double dis1 =0.1, dis2 =0.2;
+				
+				
+				Scanner sc = new Scanner(System.in);
+				
+				System.out.print("Enter the number of items: ");
+				num = sc.nextInt();
+			
+			    System.out.print("Enter price of first item: RM ");
+			    pri1 = sc.nextDouble();
+			    System.out.print("Enter quantity of first item: ");
+				quan1 = sc.nextDouble();
+				sum1 = pri1 * quan1;
+				
+				System.out.println("");
+				
+				System.out.print("Enter price of second item: RM ");
+			    pri2 = sc.nextDouble();
+			    System.out.print("Enter quantity of second item: ");
+				quan2 = sc.nextDouble();
+				sum2 = pri2 * quan2;
+				
+				System.out.println("");
+				
+				System.out.print("Enter price of third item: RM ");
+			    pri3 = sc.nextDouble();
+			    System.out.print("Enter quantity of third item: ");
+				quan3 = sc.nextDouble();
+				sum3 = pri3 * quan3;
+				
+				System.out.println("");
+				
+				total = sum1 +sum2+ sum3;
+				
+				if (total > 100)
+				{	
+					discount = (int)(total* 0.2);
+				}    
+			    else
+			    {	
+			    	discount = (int)(total* 0.1);
+			    }
+				
+					ftotal = total - discount;
+					
+				System.out.printf("\nTotal price       : RM %.2f" , total);
+			    System.out.printf("\nDiscount received : RM %.2f" , discount);
+			    System.out.printf("\nPrice to be paid  : RM %.2f" , ftotal);
+			}
+
+		
+	}
+
